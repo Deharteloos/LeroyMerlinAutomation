@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="LeroyMerlinAutomation" >
+    <test name="ChromeTest">
+        <parameter name="browser" value="Chrome"/>
+        <classes>
+            <class name="TestRunner">
+            </class>
+        </classes>
+    </test>
+
+</suite>
