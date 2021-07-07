@@ -12,7 +12,6 @@ import java.util.List;
 import java.util.Set;
 
 public class TellYouEverythingPage extends BaseClass {
-    private String title;
     private static final String link = "https://www.leroymerlin.fr/bienvenue-chez-nous/tout-vous-dire/";
 
     @FindBy(xpath = "//*[@class='mt-heading mt-heading--s mt-heading--regular col-12 article-entry__title']")

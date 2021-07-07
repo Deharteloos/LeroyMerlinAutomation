@@ -13,6 +13,7 @@ public class CucumberHooks extends BaseClass {
     public void setup(){
         setUpDriver();
         PageFactory.initElements(driver, TellYouEverythingPage.class);
+        PageFactory.initElements(driver, AfterSalesServicePage.class);
     }
     @After
     public void teardown() throws IOException {

@@ -6,8 +6,8 @@ import io.cucumber.java.en.Then;
 import org.testng.Assert;
 
 public class DuplicateArticleSteps {
-    @Given("User on the page {string}")
-    public void user_on_the_page(String string) {
+    @Given("User on the page Tout vous dire")
+    public void user_on_the_page_tout_vous_dire() {
         // Write code here that turns the phrase above into concrete actions
         TellYouEverythingPage.goToPage();
         try {
