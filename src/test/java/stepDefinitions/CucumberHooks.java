@@ -15,6 +15,7 @@ public class CucumberHooks extends BaseClass {
         PageFactory.initElements(driver, TellYouEverythingPage.class);
         PageFactory.initElements(driver, AfterSalesServicePage.class);
         PageFactory.initElements(driver, FaqPage.class);
+        PageFactory.initElements(driver, HomePage.class);
     }
     @After
     public void teardown() throws IOException {

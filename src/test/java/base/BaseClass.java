@@ -1,15 +1,20 @@
 package base;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.File;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Collections;
+import java.util.NoSuchElementException;
 import java.util.concurrent.TimeUnit;
 
 public class BaseClass {
@@ -66,5 +71,24 @@ public class BaseClass {
         tps = LocalTime.now();
         value_tps = tps.format(DateTimeFormatter.ofPattern("HH:mm:ss"));
         return value_tps;
+    }
+
+    /**
+     * Cookies modal handler
+     * Checks whether the cookies dialog box is shown and accepts the cookies
+     */
+    public static void cookieModalHandler() {
+        WebElement cookieModal;
+        WebElement acceptCookieButton;
+        try {
+            cookieModal = driver.findElement(By.id("onetrust-banner-sdk"));
+            //WebDriverWait wait = new WebDriverWait(driver,5);
+            //wait.until(ExpectedConditions.visibilityOf(cookieModal));
+            acceptCookieButton = cookieModal.findElement(By.id("onetrust-accept-btn-handler"));
+            acceptCookieButton.click();
+            System.out.println("Cookies accepted");
+        }catch (NoSuchElementException ex) {
+            System.out.println("Web Element cookie not found");
+        }
     }
 }
