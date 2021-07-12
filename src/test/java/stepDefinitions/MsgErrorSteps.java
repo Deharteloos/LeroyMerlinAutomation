@@ -16,6 +16,12 @@ public class MsgErrorSteps {
         // Write code here that turns the phrase above into concrete actions
         HomePage.goToPage();
         HomePage.cookieModalHandler();
+        try {
+            if(HomePage.getTitle().equals("leroymerlin.fr"))
+                TellYouEverythingPage.recaptcha_v2();
+        } catch (InterruptedException e) {
+            System.out.println("Captcha handle failed. Exception\n\n"+e);
+        }
     }
     @And("User clicks on the connection button in the navbar")
     public void user_clicks_on_the_connection_button_in_the_navbar() {

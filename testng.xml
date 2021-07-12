@@ -1,5 +1,10 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 <suite name="LeroyMerlinAutomation" >
+
+    <listeners>
+        <listener class-name="TestListener" />
+    </listeners>
+
     <test name="ChromeTest">
         <parameter name="browser" value="Chrome"/>
         <classes>

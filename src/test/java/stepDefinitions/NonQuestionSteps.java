@@ -14,6 +14,7 @@ public class NonQuestionSteps {
     public void user_on_the_page(String string) {
         // Write code here that turns the phrase above into concrete actions
         AfterSalesServicePage.goToPage();
+        AfterSalesServicePage.cookieModalHandler();
         try {
             if(TellYouEverythingPage.getTitle().equals("leroymerlin.fr"))
                 TellYouEverythingPage.recaptcha_v2();

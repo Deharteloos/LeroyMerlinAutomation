@@ -14,6 +14,10 @@ public class HomePage extends BaseClass {
         driver.get(link);
     }
 
+    public static String getTitle() {
+        return driver.getTitle();
+    }
+
     public static void clickOnConnection() {
         connectionBtn.click();
     }

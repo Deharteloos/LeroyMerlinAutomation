@@ -1,5 +1,6 @@
 package stepDefinitions;
 
+import pageObjects.HomePage;
 import pageObjects.TellYouEverythingPage;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -10,6 +11,7 @@ public class DuplicateArticleSteps {
     public void user_on_the_page_tout_vous_dire() {
         // Write code here that turns the phrase above into concrete actions
         TellYouEverythingPage.goToPage();
+        TellYouEverythingPage.cookieModalHandler();
         try {
             if(TellYouEverythingPage.getTitle().equals("leroymerlin.fr"))
                 TellYouEverythingPage.recaptcha_v2();
